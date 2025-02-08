@@ -1,4 +1,4 @@
-package com.AlexandreLoiola.BatchHandler.rest.exceptionHandler;
+package com.AlexandreLoiola.BatchHandler.exception.exceptionHandler;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
