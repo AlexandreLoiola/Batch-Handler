@@ -28,9 +28,15 @@ public class ProductController {
         return ResponseEntity.ok(products);
     }
 
-    @PostMapping("/batch/create")
-    public ResponseEntity<List<ProductDto>> saveProductsInBatch(@RequestBody List<ProductForm> productForms) {
-            List<ProductDto> savedProducts = productService.saveAllProducts(productForms);
-            return new ResponseEntity<>(savedProducts, HttpStatus.CREATED);
+    @PostMapping("/batch")
+    public ResponseEntity<Void> saveProductsInBatch(@RequestBody List<ProductForm> productForms) {
+            productService.saveAllProducts(productForms);
+            return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @PutMapping("/batch/update-prices")
+    public ResponseEntity<Void> updatePricesInBatch() {
+        productService.updatePricesInBatch();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 }

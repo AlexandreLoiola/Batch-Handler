@@ -1,4 +1,4 @@
-package com.AlexandreLoiola.BatchHandler.rest.dto;
+package com.AlexandreLoiola.BatchHandler.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,9 +12,10 @@ import java.time.ZonedDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductDto {
+public class ProductResponse {
     private String name;
     private String description;
+    private String category;
     private BigDecimal price;
     private Integer quantity;
     private Boolean isActive;
