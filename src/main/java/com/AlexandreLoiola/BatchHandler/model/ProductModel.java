@@ -33,6 +33,9 @@ public class ProductModel {
     @Column(nullable = false)
     private Boolean isActive;
 
+    @Column(nullable = false)
+    private String category;
+
     @Version
     @Column(name = "version")
     private Long version;
